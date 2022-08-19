@@ -294,9 +294,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 149E6A7D1EADE048000D851D /* Build configuration list for PBXNativeTarget "SpreadsheetView" */;
 			buildPhases = (
+				149E6A661EADE047000D851D /* Headers */,
 				149E6A641EADE047000D851D /* Sources */,
 				149E6A651EADE047000D851D /* Frameworks */,
-				149E6A661EADE047000D851D /* Headers */,
 				149E6A671EADE047000D851D /* Resources */,
 			);
 			buildRules = (

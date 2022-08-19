@@ -50,7 +50,10 @@ public protocol SpreadsheetViewDelegate: AnyObject {
     ///   - spreadsheetView: The spreadsheet view object that is asking whether the selection should change.
     ///   - indexPath: The index path of the cell to be selected.
     /// - Returns: `true` if the item should be selected or `false` if it should not.
+    //check: 2022.8.19 v0.4 comment out regular mandatory method but define the method in extension
+    /*
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, shouldSelectItemAt indexPath: IndexPath) -> Bool
+     */
     /// Asks the delegate if the specified item should be deselected.
     /// - Note: The spreadsheet view calls this method when the user tries to deselect a cell in the spreadsheet view.
     ///   It does not call this method when you programmatically deselect items.
@@ -86,10 +89,7 @@ extension SpreadsheetViewDelegate {
     public func spreadsheetView(_ spreadsheetView: SpreadsheetView, shouldHighlightItemAt indexPath: IndexPath) -> Bool { return true }
     public func spreadsheetView(_ spreadsheetView: SpreadsheetView, didHighlightItemAt indexPath: IndexPath) {}
     public func spreadsheetView(_ spreadsheetView: SpreadsheetView, didUnhighlightItemAt indexPath: IndexPath) {}
-    //#check: omment out extension method that defined in both  regular and extention
-    /*
     public func spreadsheetView(_ spreadsheetView: SpreadsheetView, shouldSelectItemAt indexPath: IndexPath) -> Bool { return true }
-     */
     public func spreadsheetView(_ spreadsheetView: SpreadsheetView, shouldDeselectItemAt indexPath: IndexPath) -> Bool { return true }
     public func spreadsheetView(_ spreadsheetView: SpreadsheetView, didSelectItemAt indexPath: IndexPath) {}
     public func spreadsheetView(_ spreadsheetView: SpreadsheetView, didDeselectItemAt indexPath: IndexPath) {}
