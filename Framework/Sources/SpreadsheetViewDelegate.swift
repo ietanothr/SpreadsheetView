@@ -51,9 +51,9 @@ public protocol SpreadsheetViewDelegate: AnyObject {
     ///   - indexPath: The index path of the cell to be selected.
     /// - Returns: `true` if the item should be selected or `false` if it should not.
     //check: 2022.8.19 v0.4 comment out regular mandatory method but define the method in extension
-    /*
+    
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, shouldSelectItemAt indexPath: IndexPath) -> Bool
-     */
+     
     /// Asks the delegate if the specified item should be deselected.
     /// - Note: The spreadsheet view calls this method when the user tries to deselect a cell in the spreadsheet view.
     ///   It does not call this method when you programmatically deselect items.
