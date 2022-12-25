@@ -18,11 +18,13 @@ extension SpreadsheetView {
         unhighlightAllItems()
         highlightItems(on: touches)
         if !allowsMultipleSelection,
-            let touch = touches.first, let indexPath = indexPathForItem(at: touch.location(in: self)),
-            let cell = cellForItem(at: indexPath), cell.isUserInteractionEnabled {
-            selectedIndexPaths.forEach {
-                cellsForItem(at: $0).forEach { $0.isSelected = false }
-            }
+            let touch = touches.first
+            , let indexPath = indexPathForItem(at: touch.location(in: self))
+            , let cell = cellForItem(at: indexPath)
+            , cell.isUserInteractionEnabled {
+                selectedIndexPaths.forEach {
+                	cellsForItem(at: $0).forEach { $0.isSelected = false }
+            	}
         }
     }
 
